@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    background-color:whitesmoke;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    overflow-x:hidden;
+}
+
+.header{
+    border:2px solid blue;
+    border-radius:45px;
+    text-align:center;
+    font-size:2em;
+    padding: .5em;
+    margin:0.9rem;
+    width:25%;
+}
+
+.sketchSection{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+#buttonContainer{
+    border: 2px solid green;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+    width:10rem;
+    height:20rem;
+}
+
+#buttonContainer button{
+    padding:0.5rem;
+    width:75%;
+}
+
+#sketchArea{
+    border: 2px solid red;
+    width: 35rem;
+    height:35rem;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.footerSection{
+    font-size:1.5em;
+    text-align:center;
+    background-color:aqua;
+    width:100%;
+    margin-top:0.5rem;
+    padding:0.5rem;
+}
