@@ -56,7 +56,7 @@ body{
     flex-wrap:wrap;
 }
 
-.block{
+.sketchBlock{
     /* border:1px solid red; */
     /*background-color: gray; */
     display:inline-block;

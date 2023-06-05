@@ -1,24 +1,23 @@
 const sketchArea = document.querySelector("#sketchArea");
-let limit = 100;
+let gridCount = 100;
 
 
 
 
 
 
-for(let i = 0; i < limit * limit; i++){
-    const block = document.createElement("div");
-    block.classList.add("block");
-    block.style.width = `${640 / limit}px`;
-    block.style.height = `${640 / limit}px`;
-    sketchArea.appendChild(block);
+for(let i = 0; i < gridCount * gridCount; i++){
+    const sketchBlock = document.createElement("div");
+    sketchBlock.classList.add("sketchBlock");
+    sketchBlock.style.width = `${640 / gridCount}px`;
+    sketchBlock.style.height = `${640 / gridCount}px`;
+    sketchArea.appendChild(sketchBlock);
 }
 
 
-const blocks = document.querySelectorAll(".block");
+const allBlocks = document.querySelectorAll(".sketchBlock");
 
-blocks.forEach(blocks => blocks.addEventListener("mouseover", () => {
-    blocks.style.background = "green";
-    
+allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", () => {
+    allBlocks.style.background = "green";
 }));
 
