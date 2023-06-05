@@ -57,9 +57,9 @@ body{
 }
 
 .sketchBlock{
-    /* border:1px solid red; */
+    border:1px solid red;
     /*background-color: gray; */
-    display:inline-block;
+    /* display:inline-block; */
     box-sizing:border-box;
     /* max-width:35rem;
     max-height:35rem;
@@ -74,4 +74,94 @@ body{
     width:100%;
     margin-top:0.5rem;
     padding:0.5rem;
+}
+
+/*sliderSection*/
+.sliderContainer .slider{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+}
+
+.sliderContainer{
+    text-align: center;
+    height: 80px;
+    width: 380px;
+    background-color: aquamarine;
+    border-radius: 30px;
+    padding: 0 65px 0 45px;
+}
+
+.sliderContainer .slider input{
+    -webkit-appearance:none;
+    height:3px;
+    width:100%;
+    background-color:blueviolet;
+    border-radius:5px;
+    border:none;
+}
+
+.sliderContainer .slider .sliderLabel{
+    position:absolute;
+    font-size:18px;
+    font-weight: 600;
+    color:chocolate;
+}
+
+.minNum{
+    left:-22px;
+}
+
+.maxNum{
+    right:-43px;
+}
+
+.sliderContainer .sliderNum{
+    position:relative;
+    width:100%;
+}
+
+.sliderContainer .sliderNum span{
+    position:absolute;
+    height: 45px;
+    width:45px;
+    color:antiquewhite;
+    font-weight:500;
+    top:-40px;
+    transform:translateX(-50%) scale(0);
+    transform-origin:bottom;
+    transition: transform 0.3s ease-in-out;
+    line-height:55px;
+    z-index:2;
+}
+
+.sliderContainer .sliderNum span.show{
+    transform:translateX(-50%) scale(1);
+}
+
+.sliderContainer .sliderNum span::after{
+    position:absolute;
+    content:"";
+    height: 45px;
+    width:45px;
+    background-color:blueviolet;
+    left:50%;
+    transform:translateX(-50%) rotate(45deg);
+    z-index:-1;
+    border:2px solid gray;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    border-bottom-left-radius:50%;
+}
+
+.sliderContainer .slider input::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    height:20px;
+    width:20px;
+    background-color:blueviolet;
+    border-radius:50%;
+    border:2px solid gray;
+    cursor:pointer;
 }

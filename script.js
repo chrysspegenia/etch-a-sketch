@@ -1,10 +1,23 @@
 const sketchArea = document.querySelector("#sketchArea");
-let gridCount = 100;
+const slideNum = document.querySelector("span");
+const inputSlider = document.querySelector("input");
 
 
+inputSlider.oninput = (() => {
+    let value = inputSlider.value;
+    slideNum.textContent = value;
+    slideNum.style.left = value + "%";
+    slideNum.classList.add("show");
+    sketchArea.innerHTML = "";
+});
 
 
+inputSlider.onblur = (() => {
+    slideNum.classList.remove("show");
+});
 
+
+const gridCount = inputSlider.value;
 
 for(let i = 0; i < gridCount * gridCount; i++){
     const sketchBlock = document.createElement("div");
