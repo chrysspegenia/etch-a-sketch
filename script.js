@@ -9,6 +9,8 @@ inputSlider.oninput = (() => {
     slideNum.style.left = value + "%";
     slideNum.classList.add("show");
     sketchArea.innerHTML = "";
+    grid();
+    colorMode();
 });
 
 
@@ -17,20 +19,25 @@ inputSlider.onblur = (() => {
 });
 
 
-const gridCount = inputSlider.value;
+function grid(){
+    const gridCount = inputSlider.value;
 
-for(let i = 0; i < gridCount * gridCount; i++){
-    const sketchBlock = document.createElement("div");
-    sketchBlock.classList.add("sketchBlock");
-    sketchBlock.style.width = `${640 / gridCount}px`;
-    sketchBlock.style.height = `${640 / gridCount}px`;
-    sketchArea.appendChild(sketchBlock);
-}
+    for(let i = 0; i < gridCount * gridCount; i++){
+        const sketchBlock = document.createElement("div");
+        sketchBlock.classList.add("sketchBlock");
+        sketchBlock.style.width = `${640 / gridCount}px`;
+        sketchBlock.style.height = `${640 / gridCount}px`;
+        sketchArea.appendChild(sketchBlock);
+    }
+};
+grid()
 
+function colorMode(){
+    const allBlocks = document.querySelectorAll(".sketchBlock");
 
-const allBlocks = document.querySelectorAll(".sketchBlock");
-
-allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", () => {
+    allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", () => {
     allBlocks.style.background = "green";
-}));
-
+    
+    }));
+}
+colorMode()
