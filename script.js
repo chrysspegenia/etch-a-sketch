@@ -51,7 +51,10 @@ function colorMode(){
     } else if (modeSelection == "color"){
         allBlocks.style.background = "green"; //set up color wheel to choose color
     } else if (modeSelection == "rgb"){
-        allBlocks.style.background = "red"; //set up rgb randomizer r = Math.floor(math.random * 256);
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256)+50;
+        let b = Math.floor(Math.random() * 256)+100;
+        allBlocks.style.background = `rgb(${r},${g},${b})`;
     }                                       
     //trial end
     }));
