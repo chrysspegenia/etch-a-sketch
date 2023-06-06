@@ -57,7 +57,7 @@ body{
 }
 
 .sketchBlock{
-    border:1px solid red;
+    border:1px solid rgba(0,0,0,0.1);
     /*background-color: gray; */
     /* display:inline-block; */
     box-sizing:border-box;
