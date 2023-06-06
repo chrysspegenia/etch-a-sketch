@@ -1,7 +1,7 @@
 const sketchArea = document.querySelector("#sketchArea");
 const slideNum = document.querySelector("span");
 const inputSlider = document.querySelector("input");
-
+let modeSelection;
 
 inputSlider.oninput = (() => {
     let value = inputSlider.value;
@@ -32,12 +32,31 @@ function grid(){
 };
 grid()
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => button.addEventListener("click", () => {
+    modeSelection = button.id;
+    colorMode();
+}));
+
+
 function colorMode(){
     const allBlocks = document.querySelectorAll(".sketchBlock");
 
     allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", () => {
-    allBlocks.style.background = "green";
-    
+    //trial code
+
+     if(modeSelection == "eraser"){
+        allBlocks.style.background = "white";
+    } else if (modeSelection == "color"){
+        allBlocks.style.background = "green"; //set up color wheel to choose color
+    } else if (modeSelection == "rgb"){
+        allBlocks.style.background = "red"; //set up rgb randomizer r = Math.floor(math.random * 256);
+    } else if (modeSelection == "clear"){
+        allBlocks.style.background = "blue"; //clear sketch Area
+    }                                       //may separate clear on click event to clear area
+                                            //try setting condition grid()
+    //trial end
     }));
 }
 colorMode()
