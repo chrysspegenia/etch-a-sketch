@@ -50,7 +50,7 @@ function colorMode(){
     if(modeSelection == "eraser"){
         allBlocks.style.background = "white";
     } else if (modeSelection == "color"){
-        allBlocks.style.background = "green"; //set up color wheel to choose color
+        allBlocks.style.background = inputColor.value;
     } else if (modeSelection == "rgb"){
         let r = Math.floor(Math.random() * 256);
         let g = Math.floor(Math.random() * 256)+50;
