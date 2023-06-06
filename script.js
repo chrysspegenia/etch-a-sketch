@@ -58,11 +58,15 @@ function colorMode(){
 }
 colorMode()
 
-clearBtn.addEventListener("click", () => {
-    clearGrid()
-})
+// clearBtn.addEventListener("click", () => {
+//     clearGrid()
+// })
+
+clearBtn.onclick = (() => {
+    clearGrid();
+});
 
 function clearGrid(){
     sketchArea.innerHTML = "";
     grid();
-}
+};
