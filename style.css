@@ -48,6 +48,34 @@ body{
 #buttonContainer button{
     padding:0.5rem;
     width:75%;
+    transform:translateY(-70%);
+}
+
+#colorPicker{
+    -webkit-appearance: none;
+    position:relative;
+    top:-45px;
+    height:75px;
+    width:75px;
+    border:none; /*makes the box out line disappear*/
+    background:none;
+    margin:0;
+}
+
+#colorPicker::-webkit-color-swatch{
+    border:3px solid #ddd;
+    border-radius:50%;
+}
+
+
+#colorPicker::-webkit-color-swatch:hover{
+    border:3px solid #ddd;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.09) rotate(45deg);
+    border-radius: 10px;
+    box-shadow: 0 0 15px 5px #ddd; 
+                /* 10px 10px red, 
+                15px 15px green; */
 }
 
 #sketchArea{
@@ -74,7 +102,7 @@ body{
 .footerSection{
     font-size:1.5em;
     text-align:center;
-    background-color:#dd611c;
+    background-color:#eb9565;
     width:100%;
     margin-top:0.5rem;
     padding:0.5rem;
