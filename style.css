@@ -11,14 +11,15 @@ body{
     justify-content:space-between;
     align-items:center;
     overflow-x:hidden;
+    background-color:#dbd3f5;
 }
 
 .header{
-    border:2px solid blue;
+    border:2px solid #ddd;
     border-radius:45px;
     text-align:center;
     font-size:2em;
-    padding: .5em;
+    /* padding: .5em; */
     margin:0.9rem;
     width:25%;
 }
@@ -28,11 +29,14 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap:5rem;
+    background-color:#9B90DE;
+    padding: 2rem;
+    border-radius:15%;
 }
 
 #buttonContainer{
-    border: 2px solid green;
+    /* border: 2px solid #ddd; */
+    background-color:#664AFF;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
@@ -52,13 +56,12 @@ body{
     height:640px;
     display:flex;
     background-color:white;
-    /* justify-content: space-evenly; */
-    /* align-items:center; */
     flex-wrap:wrap;
+    margin:0.5em 2rem 0.5rem 5rem;
 }
 
 .sketchBlock{
-    border:1px solid rgba(0,0,0,0.1);
+    border:1px dotted rgba(0,0,0,0.1);
     /*background-color: gray; */
     /* display:inline-block; */
     box-sizing:border-box;
@@ -71,7 +74,7 @@ body{
 .footerSection{
     font-size:1.5em;
     text-align:center;
-    background-color:rgb(196, 76, 76);
+    background-color:#dd611c;
     width:100%;
     margin-top:0.5rem;
     padding:0.5rem;
@@ -101,7 +104,7 @@ body{
 .sliderContainer .slider #inputSlider{
     -webkit-appearance:none;
     height:5px;
-    width:300px;
+    width:200px;
     background-color:#ddd;
     border-radius:5px;
     border:none;
@@ -136,6 +139,7 @@ body{
     width:45px;
     color:#ddd;
     font-weight:500;
+    font-size:20px;
     right:-70px;
     transform:translateX(-50%) scale(0);
     transform-origin:bottom;
