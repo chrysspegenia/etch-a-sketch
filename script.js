@@ -8,7 +8,8 @@ let modeSelection;
 inputSlider.oninput = (() => {
     let value = inputSlider.value;
     slideNum.textContent = value;
-    slideNum.style.left = value + "%";
+    // slideNum.style.left = value + "%";
+    slideNum.style.bottom = (value-260) + "px";
     slideNum.classList.add("show");
     sketchArea.innerHTML = "";
     grid();
