@@ -4,6 +4,7 @@ const slideNum = document.querySelector("span");
 const inputSlider = document.getElementById("inputSlider");
 const inputColor = document.getElementById("colorPicker");
 let modeSelection;
+let mouseDown;
 
 inputSlider.oninput = (() => {
     let value = inputSlider.value;
@@ -21,6 +22,13 @@ inputSlider.onblur = (() => {
     slideNum.classList.remove("show");
 });
 
+document.body.onmousedown = (() => {
+    mouseDown = true;
+});
+
+document.body.onmouseup = (() => {
+    mouseDown = false;
+});
 
 function grid(){
     const gridCount = inputSlider.value;
@@ -48,11 +56,13 @@ function colorMode(){
 
     allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", () => {
     //trial code
-    if(modeSelection == "eraser"){
+    if (mouseDown == "false") return;
+    
+    if(modeSelection == "eraser" && mouseDown == true){
         allBlocks.style.background = "white";
-    } else if (modeSelection == "color"){
+    } else if (modeSelection == "color" && mouseDown == true){
         allBlocks.style.background = inputColor.value;
-    } else if (modeSelection == "rgb"){
+    } else if (modeSelection == "rgb" && mouseDown == true){
         let r = Math.floor(Math.random() * 256);
         let g = Math.floor(Math.random() * 256)+50;
         let b = Math.floor(Math.random() * 256)+100;
@@ -79,3 +89,6 @@ function clearGrid(){
 inputColor.oninput = (() => {
     modeSelection = "color";
 });
+
+
+
