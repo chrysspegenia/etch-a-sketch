@@ -4,7 +4,6 @@ const slideNum = document.querySelector("span");
 const inputSlider = document.getElementById("inputSlider");
 const inputColor = document.getElementById("colorPicker");
 let modeSelection;
-let mouseDown;
 
 inputSlider.oninput = (() => {
     let value = inputSlider.value;
@@ -20,14 +19,6 @@ inputSlider.oninput = (() => {
 
 inputSlider.onblur = (() => {
     slideNum.classList.remove("show");
-});
-
-document.body.onmousedown = (() => {
-    mouseDown = true;
-});
-
-document.body.onmouseup = (() => {
-    mouseDown = false;
 });
 
 function grid(){
@@ -54,15 +45,15 @@ buttons.forEach(button => button.addEventListener("click", () => {
 function colorMode(){
     const allBlocks = document.querySelectorAll(".sketchBlock");
 
-    allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", () => {
+    allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", (e) => {
     //trial code
-    if (mouseDown == "false") return;
     
-    if(modeSelection == "eraser" && mouseDown == true){
+    //e.buttons == 1 is built in equivalent to mousedown
+    if(modeSelection == "eraser" && e.buttons == 1){
         allBlocks.style.background = "white";
-    } else if (modeSelection == "color" && mouseDown == true){
+    } else if (modeSelection == "color" && e.buttons == 1){
         allBlocks.style.background = inputColor.value;
-    } else if (modeSelection == "rgb" && mouseDown == true){
+    } else if (modeSelection == "rgb" && e.buttons == 1){
         let r = Math.floor(Math.random() * 256);
         let g = Math.floor(Math.random() * 256)+50;
         let b = Math.floor(Math.random() * 256)+100;
