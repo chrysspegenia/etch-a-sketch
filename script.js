@@ -1,6 +1,6 @@
 const sketchArea = document.querySelector("#sketchArea");
 const clearBtn = document.getElementById("clear");
-const slideNum = document.querySelector("span");
+const slideNum = document.querySelector("#slideNumDisplay");
 const inputSlider = document.getElementById("inputSlider");
 const inputColor = document.getElementById("colorPicker");
 let modeSelection;
