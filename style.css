@@ -6,7 +6,6 @@
 
 body{
     min-height:100vh;
-    background-color:whitesmoke;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -48,9 +47,22 @@ body{
 }
 
 #buttonContainer button{
+    font-size:0.9rem;
+    font-weight: 900;
+    border-radius:20px;
     padding:0.5rem;
-    width:75%;
-    transform:translateY(-70%);
+    width:95%;
+    letter-spacing:1px;
+    background-color:#ddd;
+    color:#664AFF;
+    border:2px solid blueviolet;
+    transform:translateY(-90%);
+}
+
+#buttonContainer button:hover{
+    background-color:blueviolet;
+    color:#ddd;
+    border:2px solid #ddd;
 }
 
 #colorPicker{
