@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Caveat:wght@700&display=swap');
 *{
     margin:0;
     padding:0;
@@ -15,12 +16,13 @@ body{
 }
 
 .header{
-    border:2px solid #ddd;
+    font-family:'Caveat', cursive;
     border-radius:45px;
     text-align:center;
-    font-size:2em;
+    font-size:3em;
+    letter-spacing:10px;
     /* padding: .5em; */
-    margin:0.9rem;
+    margin:0.5rem;
     width:25%;
 }
 
@@ -100,6 +102,7 @@ body{
 }
 
 .footerSection{
+    font-family: 'Barlow Semi Condensed', sans-serif;
     font-size:1.5em;
     text-align:center;
     background-color:#eb9565;
