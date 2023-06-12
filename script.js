@@ -56,7 +56,7 @@ function colorMode(){
     
     //e.buttons == 1 is built in equivalent to mousedown
     if(modeSelection == "eraser" && e.buttons == 1){
-        allBlocks.style.background = "white";
+        allBlocks.style.background = "";
     } else if (modeSelection == "color" && e.buttons == 1){
         allBlocks.style.background = inputColor.value;
     } else if (modeSelection == "rgb" && e.buttons == 1){
