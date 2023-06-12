@@ -109,7 +109,7 @@ body{
 }
 
 #sketchArea{
-    border: 2px solid rgb(17, 0, 255);
+    border: 2px solid blueviolet;
     width: 640px;
     height:640px;
     display:flex;
@@ -221,7 +221,7 @@ body{
     left:50%;
     transform:translateX(-50%) rotate(45deg);
     z-index:-1;
-    border:2px solid blue;
+    border:2px solid #ddd;
     border-top-left-radius:50%;
     border-top-right-radius:50%;
     border-bottom-right-radius:50%;
