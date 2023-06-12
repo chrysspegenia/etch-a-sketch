@@ -13,7 +13,8 @@ inputSlider.oninput = (() => {
     let value = inputSlider.value;
     slideNum.textContent = value;
     // slideNum.style.left = value + "%";
-    slideNum.style.bottom = (value-260) + "px";
+    // slideNum.style.bottom = (value-260) + "px";
+    slideNum.style.bottom = ((value / 64) * 100) - 260 + "px";
     slideNum.classList.add("show");
     sketchArea.innerHTML = "";
     grid();
