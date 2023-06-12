@@ -12,7 +12,7 @@ let modeSelection;
 inputSlider.oninput = (() => {
     let value = inputSlider.value;
     slideNum.textContent = value;
-    // slideNum.style.left = value + "%";
+    // slideNum.style.left = value + "%"; 
     // slideNum.style.bottom = (value-260) + "px";
     slideNum.style.bottom = ((value / 64) * 100) - 260 + "px";
     slideNum.classList.add("show");
@@ -32,9 +32,9 @@ function grid(){
     for(let i = 0; i < gridCount * gridCount; i++){
         const sketchBlock = document.createElement("div");
         sketchBlock.classList.add("sketchBlock");
-        sketchBlock.setAttribute("draggable", false);//doesnt fully solve drag
         sketchBlock.style.width = `${640 / gridCount}px`;
         sketchBlock.style.height = `${640 / gridCount}px`;
+        sketchBlock.style.userSelect = "none";
         sketchArea.appendChild(sketchBlock);
     }
 };
