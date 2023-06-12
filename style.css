@@ -47,7 +47,9 @@ body{
     height:20rem;
 }
 
-#buttonContainer button{
+
+
+#buttonContainer .button{
     font-size:0.9rem;
     font-weight: 900;
     border-radius:20px;
@@ -60,7 +62,20 @@ body{
     transform:translateY(-90%);
 }
 
-#buttonContainer button:hover{
+#buttonContainer .button:hover{
+    background-color:blueviolet;
+    color:#ddd;
+    border:2px solid #ddd;
+}
+
+.activeBtn{
+    font-size:0.9rem;
+    font-weight: 900;
+    border-radius:20px;
+    padding:0.5rem;
+    width:80%;
+    letter-spacing:1px;
+    transform:translateY(-90%);
     background-color:blueviolet;
     color:#ddd;
     border:2px solid #ddd;
