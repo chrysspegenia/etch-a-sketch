@@ -64,20 +64,17 @@ function colorMode(){
         let b = Math.floor(Math.random() * 256)+100;
         allBlocks.style.background = `rgb(${r},${g},${b})`;
     }  
-                                         
+
     }));
 }
 colorMode()
 
 
 clearBtn.onclick = (() => {
-    clearGrid();
-});
-
-function clearGrid(){
     sketchArea.innerHTML = "";
     grid();
-};
+});
+
 
 inputColor.oninput = (() => {
     modeSelection = "color";
