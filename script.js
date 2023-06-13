@@ -12,8 +12,8 @@ let modeSelection;
 inputSlider.oninput = (() => {
     let value = inputSlider.value;
     slideNum.textContent = value;
-    // slideNum.style.left = value + "%"; 
-    // slideNum.style.bottom = (value-260) + "px";
+    // slideNum.style.left = value + "%";  for horizontal range
+    // slideNum.style.bottom = (value-260) + "px"; for vertical 100 range
     slideNum.style.bottom = ((value / 64) * 100) - 260 + "px";
     slideNum.classList.add("show");
     sketchArea.innerHTML = "";
@@ -52,7 +52,6 @@ function colorMode(){
     const allBlocks = document.querySelectorAll(".sketchBlock");
 
     allBlocks.forEach(allBlocks => allBlocks.addEventListener("mouseover", (e) => {
-    //trial code
     
     //e.buttons == 1 is built in equivalent to mousedown
     if(modeSelection == "eraser" && e.buttons == 1){
@@ -64,15 +63,12 @@ function colorMode(){
         let g = Math.floor(Math.random() * 256)+50;
         let b = Math.floor(Math.random() * 256)+100;
         allBlocks.style.background = `rgb(${r},${g},${b})`;
-    }                                       
-    //trial end
+    }  
+                                         
     }));
 }
 colorMode()
 
-// clearBtn.addEventListener("click", () => {
-//     clearGrid()
-// })
 
 clearBtn.onclick = (() => {
     clearGrid();
